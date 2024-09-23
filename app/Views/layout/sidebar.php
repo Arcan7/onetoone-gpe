@@ -9,12 +9,21 @@
             <ul id="sidebarnav">
                 <li class="nav-small-cap">PERSONAL</li>
                 <li>
-                    <a class=" waves-effect waves-dark" href="#1"><i class="mdi mdi-gauge"></i><span class="hide-menu">Tableau de bord </span></a>
+                    <a class="waves-effect waves-dark" href="<?= base_url('dashboard') ?>"><i class="mdi mdi-gauge"></i><span class="hide-menu">Tableau de bord </span></a>
+                </li>
+                <li>
+                    <a class="waves-effect waves-dark" href="<?= base_url('data/brute') ?>"><i class="mdi mdi-gauge"></i><span class="hide-menu">Données brutes </span></a>
+                </li>
+                <li>
+                    <a class="waves-effect waves-dark" href="#4"><i class="mdi mdi-gauge"></i><span class="hide-menu">TMC </span></a>
                 </li>
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">ADMIN</li>
                 <li>
                     <a class="waves-effect waves-dark" href="#2"><i class="mdi mdi-file"></i><span class="hide-menu">Employés</span></a>
+                </li>
+                <li>
+                    <a class="waves-effect waves-dark" href="#3"><i class="mdi mdi-file"></i><span class="hide-menu">Compte</span></a>
                 </li>
                 <li class="nav-devider"></li>
             </ul>

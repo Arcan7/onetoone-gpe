@@ -9,8 +9,8 @@ class AuthController extends BaseController
 {
     public function index()
     {
-        // return view('auth/login');
-        return view('page/dashboard');
+        return view('auth/login');
+        // return view('page/dashboard');
     }
 
     public function register()

@@ -13,15 +13,6 @@
     <title>One To One</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?= base_url() ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- chartist CSS -->
-    <link href="<?= base_url() ?>assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="<?= base_url() ?>assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="<?= base_url() ?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
-    <link href="<?= base_url() ?>assets/plugins/css-chart/css-chart.css" rel="stylesheet">
-    <!--This page css - Morris CSS -->
-    <link href="<?= base_url() ?>assets/plugins/c3-master/c3.min.css" rel="stylesheet">
-    <!-- Vector CSS -->
-    <link href="<?= base_url() ?>assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="<?= base_url() ?>css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
@@ -40,14 +31,15 @@
     <!-- ============================================================== -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
     </div>
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <div id="main-wrapper">
-    <?= $this->include('layout/header.php')?>
-    <?= $this->include('layout/sidebar.php')?>
+        <?= $this->include('layout/header.php') ?>
+        <?= $this->include('layout/sidebar.php') ?>
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
@@ -61,10 +53,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-megna">Tableau de bord</h3>
+                        <h3 class="text-megna m-b-0 m-t-0">Données brutes</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Tableau de bord</li>
+                            <li class="breadcrumb-item active">Données brutes</li>
                         </ol>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
@@ -72,7 +64,8 @@
                             <div class="d-flex m-r-20 m-l-10 hidden-md-down">
                                 <div class="chart-text m-r-10">
                                     <h6 class="m-b-0"><small>THIS MONTH</small></h6>
-                                    <h4 class="m-t-0 text-info">$58,356</h4></div>
+                                    <h4 class="m-t-0 text-info">$58,356</h4>
+                                </div>
                                 <div class="spark-chart">
                                     <div id="monthchart"></div>
                                 </div>
@@ -80,7 +73,8 @@
                             <div class="d-flex m-r-20 m-l-10 hidden-md-down">
                                 <div class="chart-text m-r-10">
                                     <h6 class="m-b-0"><small>LAST MONTH</small></h6>
-                                    <h4 class="m-t-0 text-primary">$48,356</h4></div>
+                                    <h4 class="m-t-0 text-primary">$48,356</h4>
+                                </div>
                                 <div class="spark-chart">
                                     <div id="lastmonthchart"></div>
                                 </div>
@@ -95,62 +89,62 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex flex-row">
-                                    <div class="round round-lg align-self-center round-info"><i class="ti-wallet"></i></div>
-                                    <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0 font-light">$3249</h3>
-                                        <h5 class="text-muted m-b-0">Total Revenue</h5></div>
+                                <h4 class="card-title">Données brutes</h4>
+                                
+                                <div class="table-responsive m-t-40">
+                                    <table id="myTable" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>N° d'agent</th>
+                                                <th>Agent</th>
+                                                <th>A</th>
+                                                <th>Durée</th>
+                                                <th>Durée d'attente</th>
+                                                <th>File</th>
+                                                <th>Téléphone</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>61</td>
+                                                <td>2011/04/25</td>
+                                                <td>$320,800</td>
+                                                <td>$320,800</td>
+                                                <td>$320,800</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>63</td>
+                                                <td>2011/07/25</td>
+                                                <td>$170,750</td>
+                                                <td>$170,750</td>
+                                                <td>$170,750</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ashton Cox</td>
+                                                <td>Junior Technical Author</td>
+                                                <td>San Francisco</td>
+                                                <td>66</td>
+                                                <td>2009/01/12</td>
+                                                <td>$86,000</td>
+                                                <td>$86,000</td>
+                                                <td>$86,000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-row">
-                                    <div class="round round-lg align-self-center round-warning"><i class="mdi mdi-cellphone-link"></i></div>
-                                    <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0 font-lgiht">$2376</h3>
-                                        <h5 class="text-muted m-b-0">Online Revenue</h5></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-row">
-                                    <div class="round round-lg align-self-center round-primary"><i class="mdi mdi-cart-outline"></i></div>
-                                    <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0 font-lgiht">$1795</h3>
-                                        <h5 class="text-muted m-b-0">Offline Revenue</h5></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-row">
-                                    <div class="round round-lg align-self-center round-danger"><i class="mdi mdi-bullseye"></i></div>
-                                    <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0 font-lgiht">$687</h3>
-                                        <h5 class="text-muted m-b-0">Ad. Expense</h5></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
                 </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
@@ -159,7 +153,7 @@
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
-            <?= $this->include('layout/footer.php')?>
+            <?= $this->include('layout/footer.php') ?>
         </div>
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
@@ -184,25 +178,66 @@
     <!--stickey kit -->
     <script src="<?= base_url() ?>assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <script src="<?= base_url() ?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <!--stickey kit -->
-    <script src="<?= base_url() ?>assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
     <script src="<?= base_url() ?>js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!-- chartist chart -->
-    <script src="<?= base_url() ?>assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
-    <!--c3 JavaScript -->
-    <script src="<?= base_url() ?>assets/plugins/d3/d3.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/c3-master/c3.min.js"></script>
-    <!-- Vector map JavaScript -->
-    <script src="<?= base_url() ?>assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="<?= base_url() ?>assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js"></script>
-    <script src="<?= base_url() ?>js/dashboard2.js"></script>
+    <!-- This is data table -->
+    <script src="<?= base_url() ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <!-- end - This is for export functionality only -->
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+            $(document).ready(function() {
+                var table = $('#example').DataTable({
+                    "columnDefs": [{
+                        "visible": false,
+                        "targets": 2
+                    }],
+                    "order": [
+                        [2, 'asc']
+                    ],
+                    "displayLength": 25,
+                    "drawCallback": function(settings) {
+                        var api = this.api();
+                        var rows = api.rows({
+                            page: 'current'
+                        }).nodes();
+                        var last = null;
+                        api.column(2, {
+                            page: 'current'
+                        }).data().each(function(group, i) {
+                            if (last !== group) {
+                                $(rows).eq(i).before('<tr class="group"><td colspan="5">' + group + '</td></tr>');
+                                last = group;
+                            }
+                        });
+                    }
+                });
+                // Order by the grouping
+                $('#example tbody').on('click', 'tr.group', function() {
+                    var currentOrder = table.order()[0];
+                    if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                        table.order([2, 'desc']).draw();
+                    } else {
+                        table.order([2, 'asc']).draw();
+                    }
+                });
+            });
+        });
+        $('#example23').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        });
+    </script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
